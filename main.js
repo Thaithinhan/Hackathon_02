@@ -133,9 +133,8 @@ formElement.addEventListener("submit", (e) => {
         employees.splice(index, 1, edit_employ);
       }
     });
-    render(edit_employ);
   }
-  document.querySelector("tbody").innerHTML = "";
+
   render(employees);
 });
 
