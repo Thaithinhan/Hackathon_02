@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rikkei ScoreBoard</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <div class="header_left">
+          <p>Players: <span id="number_player">3</span></p>
+          <p>Total Scores: <span id="total_scores">0</span></p>
+        </div>
+        <h1>RIKKEI SCOREBOARD</h1>
+        <div class="header_right">
+          <h3 id="stop" onclick="stop_clock()">Stop Watch</h3>
+          <h2 id="run-clock">0</h2>
+          <div class="set_clock">
+            <button onclick="start_clock()">Start</button>
+            <button onclick="reset_clock()">Reset</button>
+          </div>
+        </div>
+      </header>
+      <ul id="list_players">
+        <li>
+          <div class="playerName">
+            <button class="btn_remove">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+            <i class="fa-solid fa-crown"></i>Nguyễn Minh Thông
+          </div>
+          <div class="more_lessScore">
+            <button class="minus" onclick="minus_score(this)">-</button>
+            <input type="text" value="0" />
+            <button class="minus" onclick="plus_score(this)">+</button>
+          </div>
+        </li>
+      </ul>
+      <form id="form">
+        <input
+          type="text"
+          id="input_player"
+          placeholder="Enter a player's name"
+        />
+        <input type="submit" name="" value="Add Player" />
+      </form>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FEEDBACK TA</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <h2>Feedback TA</h2>
+      <form action="#" id="form_review">
+        <h3>Thầy Phú dạy anh em có hay không</h3>
+        <div class="rating">
+          <input type="text" value="1" onclick="get_rating(this,this.value)" />
+          <input type="text" value="2" onclick="get_rating(this,this.value)" />
+          <input type="text" value="3" onclick="get_rating(this,this.value)" />
+          <input type="text" value="4" onclick="get_rating(this,this.value)" />
+          <input type="text" value="5" onclick="get_rating(this,this.value)" />
+          <input type="text" value="6" onclick="get_rating(this,this.value)" />
+          <input type="text" value="7" onclick="get_rating(this,this.value)" />
+          <input type="text" value="8" onclick="get_rating(this,this.value)" />
+          <input type="text" value="9" onclick="get_rating(this,this.value)" />
+          <input type="text" value="10" onclick="get_rating(this,this.value)" />
+        </div>
+        <div class="send_content">
+          <input
+            type="text"
+            name=""
+            id="review_content"
+            placeholder="Write a review"
+          />
+          <input type="submit" id="send_review" value="Send" />
+        </div>
+      </form>
+      <div class="over-view">
+        <p><span id="view_number">0</span> Reviews</p>
+        <p>Average rate <span id="average_rate">8</span></p>
+      </div>
+      <ul id="list_review">
+        <li class="review_item">
+          <span class="rate">8</span>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente,
+          odit?
+          <div class="edit_remove">
+            <button class="edit" onclick="handleEdit(this, id)">
+              <i class="fa-solid fa-pen-to-square"></i>
+            </button>
+            <button class="remove" onclick="handleDelete(this, id)">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>

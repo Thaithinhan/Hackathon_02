@@ -1,0 +1,83 @@
+* {
+  box-sizing: border-box;
+}
+:root {
+  --main_color: #b30000;
+}
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.wrapper {
+  max-width: 1000px;
+  margin: auto;
+  padding: 10px;
+  background-color: lightgrey;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--main_color);
+  padding: 10px 20px;
+  color: white;
+  font-weight: 600;
+}
+.header_right {
+  text-align: center;
+}
+#stop {
+  cursor: pointer;
+}
+.set_clock button {
+  padding: 5px 15px;
+  cursor: pointer;
+}
+
+ul#list_players li {
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  align-items: center;
+  border-bottom: 0.5px solid lightgrey;
+}
+.playerName {
+  font-weight: bold;
+}
+.playerName button {
+  background-color: transparent;
+  border: none;
+  padding: 5px;
+  color: lightgrey;
+  font-weight: bold;
+  cursor: pointer;
+}
+.more_lessScore input {
+  padding: 20px 0;
+  border: none;
+}
+.more_lessScore button {
+  padding: 15px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+#form {
+  padding: 20px;
+  background-color: var(--main_color);
+  display: flex;
+}
+#form input#input_player {
+  padding: 10px;
+  flex: 75%;
+  background-color: #890300;
+  outline: none;
+  border: none;
+}
+#form input:last-child {
+  padding: 10px;
+  flex: 1;
+  font-weight: 800;
+}
