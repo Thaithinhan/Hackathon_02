@@ -133,6 +133,9 @@ formElement.addEventListener("submit", (e) => {
         employees.splice(index, 1, edit_employ);
       }
     });
+    formElement.querySelector("#fullname").value = "";
+    formElement.querySelector("#dept").value = "";
+    formElement.querySelector("#id").value = "";
   }
 
   render(employees);
