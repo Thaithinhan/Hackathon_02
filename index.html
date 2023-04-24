@@ -6,5 +6,124 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BÀI THI CƠ BẢN</title>
   </head>
-  <body></body>
+  <body>
+    <style>
+      .wrapper input {
+        padding: 10px;
+      }
+      .wrapper button {
+        padding: 10px;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+      }
+      tr {
+        text-align: center;
+      }
+      td {
+        padding: 10px;
+        border-bottom: 0.5px solid;
+      }
+      td button:first-child {
+        background-color: rgba(39, 39, 238, 0.894);
+        color: white;
+        border: none;
+      }
+      td button:last-child {
+        background-color: red;
+        color: white;
+        border: none;
+      }
+      form {
+        max-width: 600px;
+        background-color: darksalmon;
+        padding: 20px;
+      }
+      form input {
+        display: block;
+        margin-bottom: 20px;
+        outline: none;
+      }
+    </style>
+    <div class="wrapper">
+      <h2>Bài tập 1</h2>
+      <input type="text" id="input_string" />
+      <button onclick="reverse()">Đảo ngược mảng</button>
+      <p id="result_string_reverse"></p>
+    </div>
+    <div class="wrapper">
+      <h2>Bài tập 2</h2>
+      <input type="text" id="input_string1" />
+      <button onclick="capitalText()">Viết hoa ký tự đầu</button>
+      <p id="result_string_capital"></p>
+    </div>
+    <div class="wrapper">
+      <h2>Bài tập 3</h2>
+      <input
+        type="text"
+        id="input_string2"
+        placeholder="Ký tự cách nhau bởi dấu , "
+      />
+      <button onclick="removeDublicate()">Loại bỏ phần tử trùng nhau</button>
+      <p id="result_new_aray"></p>
+    </div>
+    <div class="wrapper">
+      <h2>Bài tập 4</h2>
+      <input
+        type="text"
+        id="input_string3"
+        placeholder="Ký tự cách nhau bởi dấu cách "
+      />
+      <button onclick="sort_AtoZ()">Bài 4</button>
+      <p id="result_new_aray1"></p>
+    </div>
+
+    <div class="wrapper">
+      <h2>QUẢN LÝ DANH SÁCH NHÂN VIÊN</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>No</th>
+            <th>Họ tên nhân viên</th>
+            <th>Địa chỉ</th>
+            <th>Phòng ban</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Thái Thị Nhàn</td>
+            <td>Kế toán</td>
+            <td class="edit_remove">
+              <button onclick="edit_employee(this, 1)">Edit</button>
+              <button onclick="remove_employee(this, 1)">Remove</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <!-- <button class="" id="create">Creat Employee</button> -->
+      <form action="#" id="form">
+        <h2>Form quản lý nhân viên</h2>
+        <div class="group">
+          <label for="id">ID</label>
+          <input type="text" readonly id="id" />
+        </div>
+        <div class="group">
+          <label for="fullname">Họ và tên</label>
+          <input type="text" id="fullname" placeholder="Điền tên nhân viên" />
+        </div>
+        <div class="group">
+          <label for="dept">Phòng ban</label>
+          <input type="text" id="dept" placeholder="Điền bộ phận làm việc" />
+        </div>
+        <div class="button">
+          <input type="submit" value="FINISH" />
+          <input type="button" value="Cancel" />
+        </div>
+      </form>
+    </div>
+    <script src="main.js"></script>
+  </body>
 </html>
